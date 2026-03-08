@@ -1,0 +1,25 @@
+{
+  "name": "sistemanoticias",
+  "version": "1.0.0",
+  "description": "API for SPA SistemaNoticias",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev":"nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvaneiWFreitas/SistemaNoticias.git"
+  },
+  "keywords": [],
+  "author": "Desenvolvedor Evanei Freitas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvaneiWFreitas/SistemaNoticias/issues"
+  },
+  "homepage": "https://github.com/EvaneiWFreitas/SistemaNoticias#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
