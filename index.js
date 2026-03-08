@@ -1,13 +1,12 @@
-import express from 'express'
-
+const express = require('express');
+const userRoute = require("./src/routes/user.route");
 //const express = require("express");
-const app = express()
+const app = express();
 
-app.get('/soma', (req, res) => {
-    const soma = 100 + 1;
-    res.send({soma: soma})
-})
+
+app.use("/teste", userRoute);
+
 
 app.listen(3000, () => {
-  console.log('Servidor está rodando em http://localhost:3000')
+  console.log('Servidor está rodando em http://localhost:3000');
 })
