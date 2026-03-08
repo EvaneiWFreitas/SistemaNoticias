@@ -1,12 +1,13 @@
 const express = require('express');
 const userRoute = require("./src/routes/user.route");
-//const express = require("express");
 const app = express();
 
+const port = 3000;
 
-app.use("/teste", userRoute);
+app.use(express.json());
+app.use("/user", userRoute);
 
 
-app.listen(3000, () => {
-  console.log('Servidor está rodando em http://localhost:3000');
+app.listen(port, () => {
+  console.log((`Servidor está rodando na porta ${port}`));
 })
