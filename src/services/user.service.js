@@ -1,16 +1,33 @@
 const User = require("../models/User");
 
 const createService = (body) => {
-    return User.create(body);
+  return User.create(body);
 };
 
-//FUNÇÃO BUSCA TODOS OS USUÁRIOS
+//FUNÇÃO BUSCA TODOS OS USUÁRIOS.
 const findAllService = () => User.find();
-//FUNÇÃO PARA BUSCAR O USUÁRIO PELO ID
+
+//FUNÇÃO PARA BUSCAR O USUÁRIO PELO ID.
 const findByIdService = (id) => User.findById(id);
 
+//FUNÇÃO PARA EDITAR DADOS DO USUARIO.
+const updateService = (
+  id,
+  name,
+  username,
+  email,
+  password,
+  avatar,
+  background,
+) =>
+  User.findOneAndUpdate(
+    { _id: id },
+    { name, username, email, password, avatar, background },
+  );
+
 module.exports = {
-    createService,
-    findAllService,
-    findByIdService,
+  createService,
+  findAllService,
+  findByIdService,
+  updateService,
 };
