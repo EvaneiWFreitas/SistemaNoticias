@@ -3,10 +3,12 @@
  * PARA FORMATAR O CODIGO: ALT+SHIFT+F
  * PARA COMENTAR UM BLOCO : ALT+SHIFT+A
  */
-const route = require("express").Router();
-const userController = require("../controllers/user.controller");
-const { findById } = require("../models/User");
-const { validId, validUser } = require("../middlewares/global.middlewares");
+import express from 'express';
+import userController from "../controllers/user.controller.js";
+import { validId, validUser } from "../middlewares/global.middlewares.js";
+
+const route = express.Router();
+
 
 //ESSA ROTA CADASTRA O USUARIO
 //USE O COMANDO: POST http://localhost:3000/user/ - CRIA O USUÁRIO.
@@ -21,4 +23,4 @@ route.get("/:id", validId, validUser, userController.findById);
 //USE O COMANDO: PATCH http://localhost:3000/user/69af27852d50f5e260dbf139 - EDITA O DADO DO USUÁRIO.
 route.patch("/:id", validId, validUser, userController.update);
 
-module.exports = route;
+export default route;
