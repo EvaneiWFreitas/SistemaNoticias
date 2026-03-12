@@ -3,11 +3,11 @@
  * PARA FORMATAR O CODIGO: ALT+SHIFT+F
  * PARA COMENTAR UM BLOCO : ALT+SHIFT+A
  */
-import express from 'express';
+import {Router} from 'express';
 import userController from "../controllers/user.controller.js";
 import { validId, validUser } from "../middlewares/global.middlewares.js";
 
-const route = express.Router();
+const route = Router();
 
 
 //ESSA ROTA CADASTRA O USUARIO
