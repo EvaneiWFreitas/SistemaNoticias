@@ -9,6 +9,8 @@ const app = express();
 
 connectDatabase();
 app.use(express.json());
+
+//ROTA PARA USUÁRIO
 app.use("/user", userRoute);
 
 app.listen(port, () => {
